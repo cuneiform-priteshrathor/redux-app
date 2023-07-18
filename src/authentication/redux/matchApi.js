@@ -7,16 +7,16 @@ export const matchAsync = (data) => {
         try {
             const response = await axios({
                 method: "POST",
-                url: `http://localhost:3301/api/admin/logIn`,
+                url: `http://localhost:5000/api/auth/login`,
                 data: data,
                 headers: {
                     "Content-Type": "application/json",
                 },
             })
-            console.log('response: ', response);
-            if (response.data.code === 200) {
+            if (response.status === 200) {
+                console.log('response: ', response);
                 console.log(response.data.message)
-                return dispatch(match(response.data))
+                return dispatch(match(response))
             } else {
                 console.warn(response.data.message);
             }

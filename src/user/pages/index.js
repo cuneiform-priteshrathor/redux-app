@@ -35,8 +35,8 @@ const User = () => {
                     </tr>
                 </thead>
                 <tbody style={{ border: "2px solid black" }}>
-                    {userList.records && userList.records.length ? (
-                        userList.records.map((userDetail, index) => (
+                    {userList ? (
+                        userList.map((userDetail, index) => (
 
                             <tr style={{ border: "2px solid black" }} key={index}>
                                 <td style={{ border: "2px solid black" }} className='trBodyText'>
@@ -46,24 +46,23 @@ const User = () => {
                                 </td>
                                 <td style={{ border: "2px solid black" }} className='boxForProfile'>
                                     <div className='BoxImgName' >
-                                        <span className='imgBox'>
+                                        {/* <span className='imgBox'>
                                             <img className="tableViewImage mr-1" src={userDetail.profilePicture} alt="profilePicture" />
-                                        </span>
+                                        </span> */}
                                         <div className='nameEmailBox'>
                                             <span className="f-w-600 name-table tableFontSize">{userDetail?.name ? userDetail.name : "-"}</span>
                                             <span className="f-w-600 email-table tableFontSize">{userDetail?.email ? userDetail.email : "-"}</span>
                                         </div>
                                     </div>
                                 </td>
-                                <td style={{ border: "2px solid black", textAlign: "center" }} >
+                                {/* <td style={{ border: "2px solid black", textAlign: "center" }} >
                                     <span className="f-w-600 tableFontSize">{userDetail?.status ? userDetail.status : "-"}</span>
                                 </td>
                                 <td style={{ border: "2px solid black", textAlign: "center" }} >
                                     <span className="f-w-600 tableFontSize">
                                         {userDetail?.createdOn ? new Date(userDetail.createdOn).toLocaleString() : "-"}
-                                        {/* {userDetail?.createdAt ? new Date(userDetail.createdAt).toLocaleString() : "-"} */}
                                     </span>
-                                </td>
+                                </td> */}
 
 
                             </tr>

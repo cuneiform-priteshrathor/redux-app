@@ -6,9 +6,9 @@ export const getListAsync = createAsyncThunk(
     async (searchText, { dispatch, getState }) => {
         try {
             // dispatch(loadingTrue());
-            let { skip, limit } = getState().user;
+            // let { skip, limit } = getState().user;
             const response = await axios.get(
-                `http://localhost:3301/api/admin/user/getList?skip=${skip}&limit=${limit}&search=${searchText}`,
+                `http://localhost:5000/api/user/getUser`,
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -16,9 +16,10 @@ export const getListAsync = createAsyncThunk(
                 }
             );
 
-            if (response.data.code === 200) {
+            console.log('response: ', response);
+            if (response.status === 200) {
                 console.log(response.data.message);
-                return response.data.data;
+                return response.data.getUser;
             } else {
                 console.error(response.data.message);
                 throw new Error(response.data.message);
