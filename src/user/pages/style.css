@@ -1,0 +1,89 @@
+.tableData {
+    overflow: scroll;
+    width: 100%;
+}
+
+.css-1h15ts-MuiPaper-root-MuiCard-root {
+    /* height: 100%; */
+    max-height: 72vh;
+}
+
+/* .tableData {
+    height: 80%;
+  } */
+.tableFontSize {
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+.Head_Row {
+    /* padding-left: 40px; */
+}
+
+.trBodyText {
+    text-align: center;
+}
+
+.thText {
+    font-size: 17px;
+}
+
+/* .pagination {
+    margin-top: 16px;
+    margin-left: 17px;
+  } */
+
+.forSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.forEndPosition {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.css-6g765d-MuiToolbar-root {
+    padding: -1.0rem 1rem;
+}
+
+.btnAction {
+    min-width: 60;
+}
+
+.page-item {
+    font-size: 15px;
+}
+
+.boxForProfile {
+    width: 35%;
+}
+
+.BoxImgName {
+    display: flex;
+}
+
+.imgBox {
+    margin-right: 10px;
+}
+
+.tableViewImage {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.nameEmailBox {
+    display: grid;
+    justify-items: start;
+}
+
+.displayingRecord {
+    font-size: 15px;
+}
